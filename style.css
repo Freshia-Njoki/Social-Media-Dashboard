@@ -90,7 +90,7 @@ input[type="checkbox"]:checked::before {
     margin: 0 20px;
 }
 
-.overview span{
+.overview span {
     color: hsl(228, 6%, 69%);
 }
 
@@ -112,7 +112,8 @@ input[type="checkbox"]:checked::before {
     max-width: 220px;
     max-height: 100px;
 }
-.tag{
+
+.tag {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -122,17 +123,19 @@ input[type="checkbox"]:checked::before {
     margin-bottom: 1rem;
     color: var(--subtext);
 }
-.followers{
+
+.followers {
     font-weight: normal;
     letter-spacing: 5px;
     padding-bottom: 10px;
 }
 
-.today-highlight{
+.today-highlight span{
     align-items: center;
     justify-content: center;
     color: hsl(163, 72%, 41%);
     font-size: 10px;
+    font-weight: bold;
 }
 
 .card p, .detail-card p {
@@ -174,15 +177,43 @@ input[type="checkbox"]:checked::before {
     border-top: 5px solid var(--youtube);
 }
 
-.percent{
+.percent {
     display: flex;
     flex-direction: row;
-    /* border: 2px solid red; */
     justify-content: space-around;
     align-items: center;
     margin-top: 2rem;
 }
-.value{
+
+.value {
     color: hsl(163, 72%, 41%);
     align-items: center;
+}
+
+body.light-mode {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+.dark-light-theme {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header.light-mode, #takeBack-button.light-mode, #region-filter.light-mode, .country.light-mode, .border-button.light-mode {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+header.light-mode input, header.light-mode select {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(230, 17%, 14%);
+}
+
+@media only screen and(max-width:768px){
+    header{
+        display: flex;
+        flex-direction: row;
+    }
 }
